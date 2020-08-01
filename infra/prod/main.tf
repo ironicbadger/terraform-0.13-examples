@@ -9,8 +9,6 @@ module "example-prod" {
     ssh_keys           = var.do_ssh_keys
 }
 
-# output "droplet_ips" {
-#     value = module.example-prod.*.id
-#     #value = module.example-prod.digitalocean_droplet.droplet.ipv4_address
-#     #value = module.example-prod[*].digitalocean_droplet.droplet.ipv4_address
-# }
+output "droplet_ips" {
+    value = module.example-prod[*].digitalocean_droplet.droplet.ipv4_address
+}
