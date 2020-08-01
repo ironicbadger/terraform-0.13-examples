@@ -5,4 +5,3 @@ resource "digitalocean_droplet" "droplet" {
     region   = var.do_region
     ssh_keys = var.ssh_keys
 }
-

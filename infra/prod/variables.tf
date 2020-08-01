@@ -1,3 +1,7 @@
+provider "digitalocean" {
+    token = yamldecode(file("~/.config/doctl/config.yaml"))["access-token"]
+}
+
 ## DigitalOcean vars
 variable "droplet_image" {
     description = "Execute `doctl compute image list --public` for possible values"
