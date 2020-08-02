@@ -5,3 +5,7 @@ resource "digitalocean_droplet" "droplet" {
     region   = var.do_region
     ssh_keys = var.ssh_keys
 }
+
+output "droplet_ipv4_address" {
+  value = digitalocean_droplet.droplet.ipv4_address
+}
